@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var wechat = require('wechat');
+
+const SETTING = require('jsonfile').readFileSync(__dirname+"/server/config.json");
+
 crypto = require('crypto'), //引入加密模块
   /* GET home page. */
   router.get('/', function (req, res, next) {
