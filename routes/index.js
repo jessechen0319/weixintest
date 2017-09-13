@@ -13,7 +13,8 @@ crypto = require('crypto'), //引入加密模块
       echostr = req.query.echostr;//随机字符串
 
     //2.将token、timestamp、nonce三个参数进行字典序排序
-    var array = ['helloJesse', timestamp, nonce];
+    var array = [SETTING.ACCESS_TOKEN, timestamp, nonce];
+    
     array.sort();
 
     //3.将三个参数字符串拼接成一个字符串进行sha1加密

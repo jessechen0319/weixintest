@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var bottomButton = require('./routes/server/controllers/bottombutton-wechat');
+
 var app = express();
 
 // view engine setup
@@ -21,6 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//before process 
+
 
 app.use('/', index);
 app.use('/users', users);

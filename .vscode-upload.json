@@ -6,6 +6,5 @@
     "password": "Eudcsvc7",
     "remotePath": "/root/workspace/weixintest",
     "localPath": "D:\\Workspace\\weixintest",
-    "disable": false,
-    "private_key": "~/.ssh/id_rsa"
+    "disable": false
 }
