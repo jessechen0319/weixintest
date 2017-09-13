@@ -31,23 +31,18 @@ var WechatAPI = require('wechat-api');
 const SETTING = require('jsonfile').readFileSync(__dirname+"/../config.json");
 
 const buttonObj =  {
-    "button":[
-     {
-          "name":"菜单",
-          "sub_button":[
-          {	
-              "type":"view",
-              "name":"搜索",
-              "url":"http://www.soso.com/"
-           },
-           {
-                "type":"miniprogram",
-                "name":"wxa",
-                "url":"http://mp.weixin.qq.com",
-                "appid":"wx286b93c14bbf93aa",
-                "pagepath":"pages/lunar/index"
-            }]
-      }]
+    "button": [
+        {
+            "type": "view", 
+            "name": "用户版", 
+            "url": "http://47.95.5.87/customer/index"
+        }, 
+        {
+            "type": "view", 
+            "name": "商家版", 
+            "url": "http://www.baidu.com"
+        }
+    ]
 };
 function sendButtonsToWeiChat(req, res, next){
     var api = new WechatAPI(SETTING.appID, SETTING.appsecret);
